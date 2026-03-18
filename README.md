@@ -9,7 +9,7 @@ This project presents a smart energy monitoring system using Arduino that measur
 - Components Used
 - Circuit Design
 - Working Principle
-- Observation
+- Results
 - Conclusion
 
 
