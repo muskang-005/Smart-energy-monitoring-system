@@ -32,9 +32,7 @@ void setup()
 
 void loop()
 {
-  int sensorValue = analogRead(sensorPin);
-
-  // Improved current scaling
+  int sensorValue = analogRead(sensorPin);  
   current = sensorValue * (5.0 / 1023.0) * 2.0;
 
   power = voltage * current;
@@ -60,34 +58,8 @@ void loop()
     status = "LOW";
   else
     status = "HIGH";
-
-  lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print("Power:");
-  lcd.print(power,1);
-  lcd.print("W ");
-  lcd.print(status);
-
-  lcd.setCursor(0,1);
-  lcd.print("Energy:");
-  lcd.print(energykWh,3);
-  lcd.print("kWh");
-
-  delay(1500);
-
-  lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print("Peak:");
-  lcd.print(peakPower,1);
-  lcd.print("W");
-
-  lcd.setCursor(0,1);
-  lcd.print("Cost Rs:");
-  lcd.print(cost,2);
-
-  delay(1500);
-
-  if(power < 150)
+    
+    if(power < 150)
   {
     digitalWrite(ledPin,LOW);
     noTone(buzzerPin);
@@ -132,5 +104,33 @@ void loop()
     lcd.print("Turn off loads");
   }
 
+  delay(1000);
+
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Power:");
+  lcd.print(power,1);
+  lcd.print("W ");
+  lcd.print(status);
+
+  lcd.setCursor(0,1);
+  lcd.print("Energy:");
+  lcd.print(energykWh,3);
+  lcd.print("kWh");
+
   delay(1500);
+
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Peak:");
+  lcd.print(peakPower,1);
+  lcd.print("W");
+
+  lcd.setCursor(0,1);
+  lcd.print("Cost Rs:");
+  lcd.print(cost,2);
+
+  delay(1500);
+
+  
 }
