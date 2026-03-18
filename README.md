@@ -55,7 +55,6 @@ The system displays real-time data such as power, energy, peak power, and cost o
 
 
 ![Output](images/code/circuitop_1.png)
-![Output](images/code/circuitop_2.png)
 
 ---
 
