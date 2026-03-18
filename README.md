@@ -32,7 +32,7 @@ The system displays real-time data such as power, energy, peak power, and cost o
 ## Circuit Design
 
 
-![Circuit](images/)
+![Circuit](circuitSEM.png)
 
 
 ---
