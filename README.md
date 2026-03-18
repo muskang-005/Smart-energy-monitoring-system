@@ -54,11 +54,11 @@ The system displays real-time data such as power, energy, peak power, and cost o
 - Overload condition triggered buzzer and LED alerts
 
 
-![Output](images/circuitop_1.png)
-![Output](images/circuitop_2.png)
-![Output](images/circuitop_3.png)
-![Output](images/circuitop_4.png)
-![Output](images/circuitop_5.png)
+![Output](circuitop_1.png)
+![Output](circuitop_2.png)
+![Output](circuitop_3.png)
+![Output](circuitop_4.png)
+![Output](circuitop_5.png)
 
 
 ---
