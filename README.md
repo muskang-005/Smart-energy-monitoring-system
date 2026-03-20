@@ -1,6 +1,6 @@
-# Smart-energy-monitoring-system
+# Smart Energy Monitoring System
 ## Abstract
-This project presents a smart energy monitoring system using Arduino that measures an analog input (simulated current using a potentiometer), calculates power consumption, and estimates energy usage in real time. It also provides overload indication using a buzzer and LED, along with cost estimation for efficient energy management.
+This project is based on a smart energy monitoring system using Arduino as a tool for measuring analog input (simulated current using a potentiometer), calculating power consumption, and estimating energy consumption in real time. It also provides overload indication using a buzzer and an LED, as well as cost estimation for efficient energy consumption.
 
 
 ## Table of Contents
@@ -14,12 +14,14 @@ This project presents a smart energy monitoring system using Arduino that measur
 
 
 ## Introduction
-With increasing energy consumption, monitoring and managing electricity usage has become essential. This project provides a low-cost solution for real-time power monitoring and load indication using Arduino and basic electronic components.
+Energy consumption is on the rise, and managing it is of utmost importance. The project provides a cost-effective solution for power monitoring and overload indication using Arduino and various electronic components.
 
 
 ## System Overview
-The system uses a potentiometer as a simulated current source connected to the analog input of Arduino. The Arduino reads this analog value and converts it into current. Power is calculated using a fixed voltage value, and energy consumption is tracked over time using the internal timer (millis()).
-The system displays real-time data such as power, energy, peak power, and cost on a 16×2 LCD. It also classifies load conditions and gives alerts during overload using a buzzer and LED.
+The project is based on a simulated current source using a potentiometer connected in series with the analog input of Arduino. The analog input is read by Arduino and is further used to calculate current consumption. Power consumption is calculated by using a fixed voltage value, and energy consumption is calculated using the internal timer of Arduino (millis() function).
+
+The project displays real-time data on a 16x2 LCD display and also indicates load conditions and overload using a buzzer and an LED.
+
 
 ## Components Used
 - Arduino Uno
@@ -38,20 +40,20 @@ The system displays real-time data such as power, energy, peak power, and cost o
 ---
 
 ## Working Principle
-- Arduino reads analog value from potentiometer using analogRead().This value is converted into a proportional current value
-- Power is calculated using P = V × I
-- Energy is calculated using time difference from millis(): Energy = Power x Time
-- Energy is converted into kWh and cost is calculated using a fixed rate
-- System classifies load (LOW, NORMAL, HIGH)
-- If power exceeds threshold : Overload triggers buzzer and LED alert
+- Arduino reads the analog signal from the potentiometer by using analogRead(). This signal is then converted into a proportional amount of current
+- Power is computed by using the formula P = V * I
+- Energy is computed by finding the time difference from the function millis(). Energy = Power * Time
+- Energy is then converted into kWh format and cost is computed by assuming a fixed rate
+- System classifies the load into LOW, NORMAL, and HIGH
+- If the power level goes beyond the threshold, then the system sends an overload signal to the buzzer and LED
 
 
 ## Results
-- Real-time power variation observed using potentiometer
-- Energy consumption calculated continuously
-- Cost estimation displayed on LCD
-- Load conditions successfully classified
-- Overload condition triggered buzzer and LED alerts
+- Power variation in real time can be observed by using the potentiometer
+- Energy consumption can be computed in real time
+- Cost can be computed and displayed on the LCD screen
+- Load conditions can be classified into LOW, NORMAL, and HIGH
+- Overload conditions can send signals to the buzzer and LEDs
 
 
 ![Output](circuitop_1.png)
@@ -62,8 +64,7 @@ The system displays real-time data such as power, energy, peak power, and cost o
 
 
 ---
-
 ## Conclusion
-This project demonstrates a simple and effective method for monitoring electrical parameters using Arduino. It calculates power, energy consumption, and cost in real time and displays them on an LCD. The system also provides overload indication using a buzzer and LED, helping in energy management and safety.
-Although a potentiometer is used to simulate current in this project, it can be extended to real-world applications by integrating a current sensor such as ACS712.
-In future, this system can be improved by adding internet connectivity to monitor data remotely.
+The project has shown a simple way to monitor electric parameters using Arduino. It can calculate power, energy consumption, and cost in real-time and can display it on an LCD screen. It can also give an overload indication using a buzzer and LED light.
+The project uses a potentiometer to sense current in this project.However, it can be further extended to a real-time application using a current sensor module ACS712.
+The project can be further enhanced in the future to include internet connectivity to monitor data online.
